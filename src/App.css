@@ -272,7 +272,8 @@
 }
 
 #contact {
-  position: absolute;
+  /* position: absolute; */
   font-size: 4em;
   /* top: 0px; */
+  margin-bottom: 1em;
 }

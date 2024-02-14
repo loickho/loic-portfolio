@@ -6,9 +6,9 @@ export default function Contact() {
       </h1>
       <div className="social-links">
         <p id="social-question">
-          Have a <strong>question</strong>, <br />a <strong>proposal</strong>,{" "}
-          <br />
-          or simply want to say hello? <br /> Get in touch:{" "}
+          Have a <strong>question</strong>,
+          <br /> want to <strong>work</strong> together,
+          <br /> or simply want to say hello? <br /> Get in touch:
         </p>
         <div className="links">
           <a
