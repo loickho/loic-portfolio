@@ -30,7 +30,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   min-height: 100vh;
   /* display: flex; */
   /* flex-direction: column; */
