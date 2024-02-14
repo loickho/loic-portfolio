@@ -5,7 +5,8 @@ export default function Navbar({ scrollToSection, selected }) {
 
   return (
     <div className="navbar">
-      <p>Loïc Khodarkovsky</p>
+      {selected !== "home" &&
+      <p>Loïc Khodarkovsky</p>}
       <ul className="nav-list">
         <li className={selected === "home" ? "selected" : ""} onClick={handleHomeClick}>home</li>
         <li className={selected === "about" ? "selected" : ""} onClick={() => scrollToSection("about")}>about</li>

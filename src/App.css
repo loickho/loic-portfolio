@@ -15,6 +15,7 @@
   background-color: #b53f3f;
   color: blanchedalmond;
   box-sizing: border-box;
+  min-height: 56px;
 }
 
 .nav-list {
@@ -23,6 +24,8 @@
   gap: 2rem;
   text-decoration: none;
   list-style-type: none;
+  position: absolute;
+  right: 20px;
 }
 
 .selected {
@@ -46,7 +49,7 @@
 }
 
 .welcome {
-  font-size: 6em;
+  font-size: 7em;
   margin-left: 1em;
   text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.382);
 }

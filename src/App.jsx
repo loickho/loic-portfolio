@@ -4,7 +4,7 @@ import Navbar from './components/navbar'
 import { useState, useEffect } from "react";
 
 function App() {
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
