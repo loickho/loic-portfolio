@@ -1,6 +1,11 @@
+.app {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
 .navbar {
   display: flex;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
   justify-content: space-between;
   padding-left: 20px;
@@ -9,6 +14,7 @@
   top: 0px;
   background-color: #b53f3f;
   color: blanchedalmond;
+  box-sizing: border-box;
 }
 
 .nav-list {
@@ -17,12 +23,17 @@
   gap: 2rem;
   text-decoration: none;
   list-style-type: none;
-  margin-right: 20px;
+}
+
+.selected {
+  background-image: url('./assets/scribble.png');
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .container {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
 }
 
 .welcome-container {
@@ -43,10 +54,13 @@
 .about-container {
   display: flex;
   flex-direction: row;
+  height: 80vh;
+  align-items: center;
 }
 
 #profile {
   width: 80%;
+  max-width: 500px;
 }
 
 .about-photo {
@@ -57,10 +71,205 @@
 
 .about-text {
   flex: 1;
+  padding-right: 5rem;
 }
 
 .section-header {
   text-align: center;
   font-size: 3.2em;
   line-height: 1.1;
+  scroll-snap-align: start;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  /* width: 80%; */
+  padding-left: 4rem;
+  padding-right: 4rem;
+  justify-content: center;
+}
+
+.carousel-item {
+  display: none;
+  width: 50vw;
+  height: 50vh;
+  padding-bottom: 30px;
+}
+
+.carousel-item.active {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.797);
+}
+
+.image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  /* background: rgba(0, 0, 0, 0.5); */
+  padding: 10px;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.tags {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.624);
+}
+
+.prev,
+.next {
+  padding: 4rem;
+  cursor: pointer;
+  font-size: 3em;
+}
+
+.projects-container {
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3rem;
+  height: 80vh;
+}
+
+.project {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-text {
+  border: 1px solid red;
+  max-width: 600px;
+}
+
+#TypeScript {
+  background-color: #007acc;
+}
+
+#JavaScript {
+  background-color: #F0DB4F;
+}
+
+#React {
+  background-color: #00d8ff;
+}
+
+#ReactNative {
+  background-color: #ff6347;
+}
+
+#Node {
+  background-color: #3c873a;
+}
+
+#MongoDB {
+  background-color: #00684A;
+}
+
+#PostgreSQL {
+  background-color: #0064a5;
+}
+
+#SoSummit-image {
+  width: 100%;
+  background-image: url('./assets/SoSummit.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#weekendTraveller-image {
+  width: 100%;
+  background-image: url('./assets/weekendTraveller.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#blossomBud-image {
+  width: 100%;
+  background-image: url('./assets/blossombud.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-container {
+  height: 60vh;
+  background-color: #b53f3f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: end;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+  gap: 2em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
+}
+
+.social-links a {
+  color: blanchedalmond;
+  text-decoration: underline;
+}
+
+.social-links a:hover {
+  color: #3E3FB4;
+}
+
+#social-question {
+  text-align: end;
+}
+
+#contact {
+  position: absolute;
+  font-size: 4em;
+  /* top: 0px; */
 }
