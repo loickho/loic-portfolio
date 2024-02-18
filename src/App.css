@@ -118,6 +118,7 @@
   border-radius: 15px;
   margin-top: 15px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.797);
+  cursor: pointer;
 }
 
 .image-title {
@@ -150,6 +151,10 @@
   border-radius: 4px;
   font-size: 0.8em;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.624);
+}
+
+.text {
+
 }
 
 .prev,

@@ -55,24 +55,34 @@ export default function Carousel() {
     handleClickPrev();
   };
 
+  function handleClickLink (link) {
+    window.open(link);
+  }
+
   const slides = [
     {
       src: SoSummit,
       alt: "Image 1",
       title: "SoSummit",
-      tags: ["TypeScript", "React", "React Native", "Node", "MongoDB"]
+      tags: ["TypeScript", "React", "React Native", "Node", "MongoDB"],
+      link: 'https://sosummit.netlify.app',
+      text: "SoSummit is a service designed to make snowsports safer. It consists of a mobile app, used to receive notifications and send requests for help, and a dashboard, which receives these help requests and can dispatch ski patrol to the injured person. My responsibilities included:• Configuring the backend infrastructure, defining API routes and integrating socket.io for real-time communication between the mobile app and the dashboard.• Designing schemas and implementing data modeling in Mongoose to efficiently handle database queries.• Building the React Native mobile app and React dashboard, using Redux for state management and WebSockets for real-time communication, to ensure robust and efficient user experiences across platforms.",
     },
     {
       src: WeekendTraveller,
       alt: "Image 2",
       title: "Weekend Traveller",
-      tags: ["TypeScript", "React", "Node", "PostgreSQL"]
+      tags: ["TypeScript", "React", "Node", "PostgreSQL"],
+      link: 'https://github.com/pooya-jb/weekend-traveller',
+      text: "addd",
     },
     {
       src: BlossomBud,
       alt: "Image 3",
       title: "BlossomBud",
-      tags: ["JavaScript", "React", "Node", "MongoDB"]
+      tags: ["JavaScript", "React", "Node", "MongoDB"],
+      link: 'https://github.com/loickho/BlossomBud',
+      text: "a",
     },
   ];
   return (
@@ -93,22 +103,26 @@ export default function Carousel() {
       </animated.div>
       <div className="carousel">
         {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${
-              index === currentIndex ? "active" : ""
-            }`}
-          >
-            <div className="image-title">{slide.title}</div>
-            <div className="tags">
-              {slide.tags.map((tag, i) => (
-                <span key={i} className="tag" id={tag}>
-                  {tag}
-                </span>
-              ))}
+          <>
+            <div
+              key={index}
+              className={`carousel-item ${
+                index === currentIndex ? "active" : ""
+              }`}
+              onClick={() => handleClickLink(slide.link)}
+            >
+              <div className="image-title">{slide.title}</div>
+              <div className="tags">
+                {slide.tags.map((tag, i) => (
+                  <span key={i} className="tag" id={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <img src={slide.src} alt={slide.alt}/>
+              {/* <div className="text">{slide.text}</div> */}
             </div>
-            <img src={slide.src} alt={slide.alt} />
-          </div>
+          </>
         ))}
       </div>
       <animated.div

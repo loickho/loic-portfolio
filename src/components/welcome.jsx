@@ -17,7 +17,7 @@ export default function Welcome() {
         <h1 className="welcome scroll-to" id="home">
           Hey.
           <br />
-          I&apos;m Loïc.{" "}
+          I&apos;m Loïc.
         </h1>
       </div>
 
