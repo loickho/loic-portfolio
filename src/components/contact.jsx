@@ -8,7 +8,7 @@ export default function Contact() {
         <p id="social-question">
           Have a <strong>question</strong>,
           <br /> want to <strong>work</strong> together,
-          <br /> or simply want to say hello? <br /> Get in touch:
+          <br /> or simply want to say hello? <br /><br /> Get in touch:
         </p>
         <div className="links">
           <a
@@ -26,7 +26,7 @@ export default function Contact() {
             GitHub
           </a>
           <a href="mailto:lkhodarkovsky@gmail.com">
-            Email: lkhodarkovsky@gmail.com
+            Email
           </a>
         </div>
         <p>Created by yours truly using React. Deployed on Netlify. </p>

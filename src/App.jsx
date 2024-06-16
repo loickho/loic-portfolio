@@ -13,7 +13,6 @@ function App() {
 
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
-
         if (
           rect.top <= 80 &&
           (rect.bottom >= 0 || (rect.top <= 0 && rect.bottom >= window.innerHeight))

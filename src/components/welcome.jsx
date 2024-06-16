@@ -21,6 +21,12 @@ export default function Welcome() {
         </h1>
       </div>
 
+      <div className="scroll-down">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <h1 className="section-header scroll-to" id="about">
         about
       </h1>
